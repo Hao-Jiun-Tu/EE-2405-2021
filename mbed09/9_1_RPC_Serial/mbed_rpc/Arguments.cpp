@@ -64,7 +64,7 @@ PinName parse_pins(const char *str) {
         }
         return port_pin((PortName)port, pin);
 
-#elif defined(TARGET_NUCLEO_F072RB) || defined(TARGET_NUCLEO_F303K8) || defined(TARGET_NUCLEO_F411RE)
+#elif defined(TARGET_NUCLEO_F072RB) || defined(TARGET_NUCLEO_F303K8) || defined(TARGET_NUCLEO_F411RE) || defined(TARGET_B_L4S5I_IOT01A)
     if (str[0] == 'P') {   // PX_XX e.g.PA_2 PC_15
         uint32_t port = str[1] - 'A';
         uint32_t pin  = str[3] - '0';       
@@ -107,7 +107,6 @@ PinName parse_pins(const char *str) {
             case '1' : return LED1;
             case '2' : return LED2;
             case '3' : return LED3;
-            case '4' : return LED4;
         }
 
     } else if (str[0] == 'U') {  // USB?X
