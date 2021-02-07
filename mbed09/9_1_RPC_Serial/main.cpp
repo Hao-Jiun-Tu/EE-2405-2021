@@ -24,7 +24,7 @@ int main() {
 
         for(int i=0; ; i++) {
             char recv = fgetc(devin);
-            if ( recv == '\r' ) {
+            if ( recv == '\n' ) {
                 printf("\r\n");
                 break;
             }
