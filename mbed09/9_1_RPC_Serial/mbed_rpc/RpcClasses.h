@@ -261,7 +261,7 @@ public:
             {"new", rpc_function_caller<const char*, PinName, PinName, const char*, &RPC::construct<RpcSerial, PinName, PinName, const char*> >},
             RPC_METHOD_END
         };
-        static rpc_class c = {"Serial", funcs, NULL};
+        static rpc_class c = {"BufferedSerial", funcs, NULL};
         return &c;
     }
 private:
